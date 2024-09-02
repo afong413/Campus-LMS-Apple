@@ -52,6 +52,11 @@ struct RootView: View {
                 SignInView(viewModel: viewModel)
             }
         }
+        .onAppear {
+            Task {
+                try viewModel.getAuthenticatedUser()
+            }
+        }
     }
 }
 

@@ -12,14 +12,12 @@ struct SettingsView: View {
     @StateObject var viewModel: RootViewModel
     
     var body: some View {
-        VStack {
+        List {
             Button("Sign Out") {
                 Task {
                     try viewModel.signOut()
                 }
             }
-            .buttonStyle(.bordered)
-            Spacer()
         }
         .navigationTitle("Settings")
     }

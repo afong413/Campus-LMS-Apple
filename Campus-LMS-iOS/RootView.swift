@@ -43,17 +43,9 @@ struct RootView: View {
     @StateObject var viewModel = RootViewModel()
     
     var body: some View {
-        NavigationStack {
-            VStack {
-                Button("Sign Out") {
-                    Task {
-                        try viewModel.signOut()
-                    }
-                }
-                .buttonStyle(.bordered)
-                Spacer()
-            }
-            .navigationTitle("Settings")
+        TabView {
+            NavigationStack { SettingsView(viewModel: viewModel) }
+                .tabItem { Label("Settings", systemImage: "gear") }
         }
         .fullScreenCover(isPresented: !$viewModel.authenticated) {
             NavigationStack {

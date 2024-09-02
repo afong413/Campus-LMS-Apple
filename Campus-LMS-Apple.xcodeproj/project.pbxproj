@@ -21,6 +21,7 @@
 		DF158EAD2C864D3B00D52C59 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EAC2C864D3B00D52C59 /* AuthManager.swift */; };
 		DF158EAF2C864D5200D52C59 /* GoogleSignInHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EAE2C864D5200D52C59 /* GoogleSignInHelper.swift */; };
 		DF158EB12C864E9E00D52C59 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EB02C864E9E00D52C59 /* Operators.swift */; };
+		DF158EB72C86576F00D52C59 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EB62C86576F00D52C59 /* SettingsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		DF158EAC2C864D3B00D52C59 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
 		DF158EAE2C864D5200D52C59 /* GoogleSignInHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInHelper.swift; sourceTree = "<group>"; };
 		DF158EB02C864E9E00D52C59 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
+		DF158EB62C86576F00D52C59 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,6 +79,7 @@
 				DF158E862C86478300D52C59 /* Campus_LMS_iOSApp.swift */,
 				DF158EA12C864C5200D52C59 /* RootView.swift */,
 				DF158EA32C864C5F00D52C59 /* SignInView.swift */,
+				DF158EB62C86576F00D52C59 /* SettingsView.swift */,
 				DF158EA52C864CAC00D52C59 /* Firebase */,
 				DF158EA72C864CBB00D52C59 /* Utilities */,
 				DF158E8A2C86478400D52C59 /* Assets.xcassets */,
@@ -211,6 +214,7 @@
 				DF158EA42C864C5F00D52C59 /* SignInView.swift in Sources */,
 				DF158EA22C864C5200D52C59 /* RootView.swift in Sources */,
 				DF158EB12C864E9E00D52C59 /* Operators.swift in Sources */,
+				DF158EB72C86576F00D52C59 /* SettingsView.swift in Sources */,
 				DF158EAB2C864CEF00D52C59 /* Utilities.swift in Sources */,
 				DF158E872C86478300D52C59 /* Campus_LMS_iOSApp.swift in Sources */,
 				DF158EAF2C864D5200D52C59 /* GoogleSignInHelper.swift in Sources */,

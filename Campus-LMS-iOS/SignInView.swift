@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SignInView: View {
-    /// Inherited from RootView.
     @StateObject var viewModel: RootViewModel
     
     var body: some View {
@@ -16,6 +15,7 @@ struct SignInView: View {
             Button("Sign In With Google") {
                 Task {
                     try await viewModel.signInWithGoogle()
+                    try await viewModel.getCourses()
                 }
             }
             .buttonStyle(.bordered)

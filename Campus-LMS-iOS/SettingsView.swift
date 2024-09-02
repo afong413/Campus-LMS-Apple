@@ -8,7 +8,6 @@
 import SwiftUI
 
 struct SettingsView: View {
-    /// Inherits from RootView
     @StateObject var viewModel: RootViewModel
     
     var body: some View {

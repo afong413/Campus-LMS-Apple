@@ -22,6 +22,10 @@
 		DF158EAF2C864D5200D52C59 /* GoogleSignInHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EAE2C864D5200D52C59 /* GoogleSignInHelper.swift */; };
 		DF158EB12C864E9E00D52C59 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EB02C864E9E00D52C59 /* Operators.swift */; };
 		DF158EB72C86576F00D52C59 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EB62C86576F00D52C59 /* SettingsView.swift */; };
+		DF158EB92C8659FA00D52C59 /* FirestoreManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EB82C8659FA00D52C59 /* FirestoreManager.swift */; };
+		DF158EBC2C865A7900D52C59 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EBB2C865A7900D52C59 /* DashboardView.swift */; };
+		DF158EBF2C865A9200D52C59 /* CourseCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EBE2C865A9200D52C59 /* CourseCoverView.swift */; };
+		DF158EC12C865A9E00D52C59 /* CourseHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EC02C865A9E00D52C59 /* CourseHomeView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +42,10 @@
 		DF158EAE2C864D5200D52C59 /* GoogleSignInHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInHelper.swift; sourceTree = "<group>"; };
 		DF158EB02C864E9E00D52C59 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 		DF158EB62C86576F00D52C59 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DF158EB82C8659FA00D52C59 /* FirestoreManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirestoreManager.swift; sourceTree = "<group>"; };
+		DF158EBB2C865A7900D52C59 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
+		DF158EBE2C865A9200D52C59 /* CourseCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCoverView.swift; sourceTree = "<group>"; };
+		DF158EC02C865A9E00D52C59 /* CourseHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseHomeView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +88,7 @@
 				DF158EA12C864C5200D52C59 /* RootView.swift */,
 				DF158EA32C864C5F00D52C59 /* SignInView.swift */,
 				DF158EB62C86576F00D52C59 /* SettingsView.swift */,
+				DF158EBA2C865A5900D52C59 /* Dashboard */,
 				DF158EA52C864CAC00D52C59 /* Firebase */,
 				DF158EA72C864CBB00D52C59 /* Utilities */,
 				DF158E8A2C86478400D52C59 /* Assets.xcassets */,
@@ -126,8 +135,27 @@
 		DF158EA92C864CCD00D52C59 /* Firestore */ = {
 			isa = PBXGroup;
 			children = (
+				DF158EB82C8659FA00D52C59 /* FirestoreManager.swift */,
 			);
 			path = Firestore;
+			sourceTree = "<group>";
+		};
+		DF158EBA2C865A5900D52C59 /* Dashboard */ = {
+			isa = PBXGroup;
+			children = (
+				DF158EBB2C865A7900D52C59 /* DashboardView.swift */,
+				DF158EBD2C865A7F00D52C59 /* Course */,
+			);
+			path = Dashboard;
+			sourceTree = "<group>";
+		};
+		DF158EBD2C865A7F00D52C59 /* Course */ = {
+			isa = PBXGroup;
+			children = (
+				DF158EBE2C865A9200D52C59 /* CourseCoverView.swift */,
+				DF158EC02C865A9E00D52C59 /* CourseHomeView.swift */,
+			);
+			path = Course;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -215,9 +243,13 @@
 				DF158EA22C864C5200D52C59 /* RootView.swift in Sources */,
 				DF158EB12C864E9E00D52C59 /* Operators.swift in Sources */,
 				DF158EB72C86576F00D52C59 /* SettingsView.swift in Sources */,
+				DF158EC12C865A9E00D52C59 /* CourseHomeView.swift in Sources */,
 				DF158EAB2C864CEF00D52C59 /* Utilities.swift in Sources */,
 				DF158E872C86478300D52C59 /* Campus_LMS_iOSApp.swift in Sources */,
+				DF158EBF2C865A9200D52C59 /* CourseCoverView.swift in Sources */,
 				DF158EAF2C864D5200D52C59 /* GoogleSignInHelper.swift in Sources */,
+				DF158EBC2C865A7900D52C59 /* DashboardView.swift in Sources */,
+				DF158EB92C8659FA00D52C59 /* FirestoreManager.swift in Sources */,
 				DF158EAD2C864D3B00D52C59 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

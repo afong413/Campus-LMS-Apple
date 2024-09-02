@@ -10,7 +10,8 @@ import SwiftUI
 @MainActor
 final class RootViewModel: ObservableObject {
     @Published var user: AuthResultModel? = nil
-    @Published var authenticated = false
+    @Published var courses: [CourseModel] = []
+    @Published var authenticated = true
     
     func getAuthenticatedUser() throws {
         do {
@@ -35,7 +36,22 @@ final class RootViewModel: ObservableObject {
         try AuthManager.shared.signOut()
         
         user = nil
+        courses = []
         authenticated = false
+    }
+    
+    func getCourses() async throws {
+        guard let email = user?.email else {
+            throw AuthError.unauthenticated
+        }
+
+        let userModel = try await FirestoreManager.shared.getUser(email: email)
+
+        courses = []
+                
+        for ref in userModel.courses {
+            courses.append(try await FirestoreManager.shared.getCourse(ref))
+        }
     }
 }
 
@@ -44,6 +60,8 @@ struct RootView: View {
     
     var body: some View {
         TabView {
+            NavigationStack { DashboardView(viewModel: viewModel) }
+                .tabItem { Label("Dashboard", systemImage: "house") }
             NavigationStack { SettingsView(viewModel: viewModel) }
                 .tabItem { Label("Settings", systemImage: "gear") }
         }
@@ -55,6 +73,7 @@ struct RootView: View {
         .onAppear {
             Task {
                 try viewModel.getAuthenticatedUser()
+                try await viewModel.getCourses()
             }
         }
     }

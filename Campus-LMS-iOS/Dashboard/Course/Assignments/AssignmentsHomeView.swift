@@ -8,11 +8,33 @@
 import SwiftUI
 
 struct AssignmentsHomeView: View {
+    @StateObject var viewModel: CourseViewModel
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        List {
+            ForEach(viewModel.assignments) { assignment in
+                NavigationLink(assignment.title) {
+                    AssignmentView(assignment: assignment)
+                }
+            }
+        }
+        .onAppear {
+            Task {
+                try await viewModel.getAssignments()
+            }
+        }
+        .navigationTitle("Assignments")
     }
 }
 
 #Preview {
-    AssignmentsHomeView()
+    NavigationStack {
+        AssignmentsHomeView(viewModel: CourseViewModel(course: CourseModel(
+            courseId: "0000",
+            title: "Math 6",
+            room: "Hill 22",
+            teachers: [],
+            students: []
+        )))
+    }
 }

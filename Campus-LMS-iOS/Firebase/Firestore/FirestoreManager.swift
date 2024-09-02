@@ -75,6 +75,29 @@ final class FirestoreManager {
         
         return try await getCourse(ref)
     }
+    
+    func getAssignments(_ courseRef: DocumentReference) async throws -> [AssignmentModel] {
+        let ref = courseRef
+            .collection("assignments")
+        
+        let snapshot = try await ref.getDocuments()
+        
+        var assignments: [AssignmentModel] = []
+        
+        for doc in snapshot.documents {
+            assignments.append(try doc.data(as: AssignmentModel.self, decoder: decoder))
+        }
+        
+        return assignments
+    }
+    
+    func getAssignments(courseId: String) async throws -> [AssignmentModel] {
+        let courseRef = Firestore.firestore()
+            .collection("courses")
+            .document(courseId)
+        
+        return try await getAssignments(courseRef)
+    }
 }
 
 enum FirestoreError: Error {

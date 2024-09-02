@@ -27,7 +27,7 @@ struct CourseCoverView: View {
 
 #Preview {
     CourseCoverView(course: CourseModel(
-        courseId: "1234",
+        courseId: "0000",
         title: "Math 6",
         room: "Hill 22",
         teachers: [],

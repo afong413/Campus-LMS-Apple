@@ -14,7 +14,7 @@ struct DashboardView: View {
         List {
             ForEach(viewModel.courses) { course in
                 NavigationLink {
-                    CourseHomeView(course: course)
+                    CourseView(course: course)
                 } label: {
                     CourseCoverView(course: course)
                 }

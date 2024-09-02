@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		DF158E872C86478300D52C59 /* Campus_LMS_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158E862C86478300D52C59 /* Campus_LMS_iOSApp.swift */; };
-		DF158E892C86478300D52C59 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158E882C86478300D52C59 /* ContentView.swift */; };
 		DF158E8B2C86478400D52C59 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF158E8A2C86478400D52C59 /* Assets.xcassets */; };
 		DF158E8E2C86478400D52C59 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DF158E8D2C86478400D52C59 /* Preview Assets.xcassets */; };
 		DF158E942C8649B000D52C59 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = DF158E932C8649B000D52C59 /* FirebaseAuth */; };
@@ -16,16 +15,27 @@
 		DF158E992C8649B900D52C59 /* GoogleSignIn in Frameworks */ = {isa = PBXBuildFile; productRef = DF158E982C8649B900D52C59 /* GoogleSignIn */; };
 		DF158E9B2C8649B900D52C59 /* GoogleSignInSwift in Frameworks */ = {isa = PBXBuildFile; productRef = DF158E9A2C8649B900D52C59 /* GoogleSignInSwift */; };
 		DF158EA02C864B6500D52C59 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = DF158E9F2C864B6500D52C59 /* GoogleService-Info.plist */; };
+		DF158EA22C864C5200D52C59 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EA12C864C5200D52C59 /* RootView.swift */; };
+		DF158EA42C864C5F00D52C59 /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EA32C864C5F00D52C59 /* SignInView.swift */; };
+		DF158EAB2C864CEF00D52C59 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EAA2C864CEF00D52C59 /* Utilities.swift */; };
+		DF158EAD2C864D3B00D52C59 /* AuthManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EAC2C864D3B00D52C59 /* AuthManager.swift */; };
+		DF158EAF2C864D5200D52C59 /* GoogleSignInHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EAE2C864D5200D52C59 /* GoogleSignInHelper.swift */; };
+		DF158EB12C864E9E00D52C59 /* Operators.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EB02C864E9E00D52C59 /* Operators.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		DF158E832C86478300D52C59 /* Campus-LMS-iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Campus-LMS-iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DF158E832C86478300D52C59 /* Campus LMS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Campus LMS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DF158E862C86478300D52C59 /* Campus_LMS_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Campus_LMS_iOSApp.swift; sourceTree = "<group>"; };
-		DF158E882C86478300D52C59 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DF158E8A2C86478400D52C59 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DF158E8D2C86478400D52C59 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		DF158E9C2C864A7100D52C59 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		DF158E9F2C864B6500D52C59 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		DF158EA12C864C5200D52C59 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		DF158EA32C864C5F00D52C59 /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
+		DF158EAA2C864CEF00D52C59 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
+		DF158EAC2C864D3B00D52C59 /* AuthManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthManager.swift; sourceTree = "<group>"; };
+		DF158EAE2C864D5200D52C59 /* GoogleSignInHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleSignInHelper.swift; sourceTree = "<group>"; };
+		DF158EB02C864E9E00D52C59 /* Operators.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operators.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,7 +64,7 @@
 		DF158E842C86478300D52C59 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DF158E832C86478300D52C59 /* Campus-LMS-iOS.app */,
+				DF158E832C86478300D52C59 /* Campus LMS.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -65,7 +75,10 @@
 				DF158E9C2C864A7100D52C59 /* Info.plist */,
 				DF158E9F2C864B6500D52C59 /* GoogleService-Info.plist */,
 				DF158E862C86478300D52C59 /* Campus_LMS_iOSApp.swift */,
-				DF158E882C86478300D52C59 /* ContentView.swift */,
+				DF158EA12C864C5200D52C59 /* RootView.swift */,
+				DF158EA32C864C5F00D52C59 /* SignInView.swift */,
+				DF158EA52C864CAC00D52C59 /* Firebase */,
+				DF158EA72C864CBB00D52C59 /* Utilities */,
 				DF158E8A2C86478400D52C59 /* Assets.xcassets */,
 				DF158E8C2C86478400D52C59 /* Preview Content */,
 			);
@@ -78,6 +91,40 @@
 				DF158E8D2C86478400D52C59 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		DF158EA52C864CAC00D52C59 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				DF158EA82C864CC600D52C59 /* Auth */,
+				DF158EA92C864CCD00D52C59 /* Firestore */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
+		DF158EA72C864CBB00D52C59 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				DF158EAA2C864CEF00D52C59 /* Utilities.swift */,
+				DF158EB02C864E9E00D52C59 /* Operators.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
+		DF158EA82C864CC600D52C59 /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				DF158EAC2C864D3B00D52C59 /* AuthManager.swift */,
+				DF158EAE2C864D5200D52C59 /* GoogleSignInHelper.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		DF158EA92C864CCD00D52C59 /* Firestore */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Firestore;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -103,7 +150,7 @@
 				DF158E9A2C8649B900D52C59 /* GoogleSignInSwift */,
 			);
 			productName = "Campus-LMS-iOS";
-			productReference = DF158E832C86478300D52C59 /* Campus-LMS-iOS.app */;
+			productReference = DF158E832C86478300D52C59 /* Campus LMS.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -161,8 +208,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF158E892C86478300D52C59 /* ContentView.swift in Sources */,
+				DF158EA42C864C5F00D52C59 /* SignInView.swift in Sources */,
+				DF158EA22C864C5200D52C59 /* RootView.swift in Sources */,
+				DF158EB12C864E9E00D52C59 /* Operators.swift in Sources */,
+				DF158EAB2C864CEF00D52C59 /* Utilities.swift in Sources */,
 				DF158E872C86478300D52C59 /* Campus_LMS_iOSApp.swift in Sources */,
+				DF158EAF2C864D5200D52C59 /* GoogleSignInHelper.swift in Sources */,
+				DF158EAD2C864D3B00D52C59 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -242,6 +294,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Campus-LMS-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Campus LMS";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -257,8 +310,8 @@
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aidenfong.Campus-LMS-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aidenfong.Campus-LMS";
+				PRODUCT_NAME = "Campus LMS";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
@@ -327,6 +380,7 @@
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Campus-LMS-iOS/Info.plist";
+				INFOPLIST_KEY_CFBundleDisplayName = "Campus LMS";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -341,8 +395,8 @@
 				MARKETING_VERSION = 1.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.aidenfong.Campus-LMS-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.aidenfong.Campus-LMS";
+				PRODUCT_NAME = "Campus LMS";
 				SDKROOT = iphoneos;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;

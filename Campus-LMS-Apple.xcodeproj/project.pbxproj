@@ -26,6 +26,8 @@
 		DF158EBC2C865A7900D52C59 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EBB2C865A7900D52C59 /* DashboardView.swift */; };
 		DF158EBF2C865A9200D52C59 /* CourseCoverView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EBE2C865A9200D52C59 /* CourseCoverView.swift */; };
 		DF158EC12C865A9E00D52C59 /* CourseHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EC02C865A9E00D52C59 /* CourseHomeView.swift */; };
+		DF158ECA2C867A4500D52C59 /* AssignmentsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EC72C867A4500D52C59 /* AssignmentsHomeView.swift */; };
+		DF158ECB2C867A4500D52C59 /* AssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EC82C867A4500D52C59 /* AssignmentView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +48,8 @@
 		DF158EBB2C865A7900D52C59 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		DF158EBE2C865A9200D52C59 /* CourseCoverView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseCoverView.swift; sourceTree = "<group>"; };
 		DF158EC02C865A9E00D52C59 /* CourseHomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CourseHomeView.swift; sourceTree = "<group>"; };
+		DF158EC72C867A4500D52C59 /* AssignmentsHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsHomeView.swift; sourceTree = "<group>"; };
+		DF158EC82C867A4500D52C59 /* AssignmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -154,8 +158,18 @@
 			children = (
 				DF158EBE2C865A9200D52C59 /* CourseCoverView.swift */,
 				DF158EC02C865A9E00D52C59 /* CourseHomeView.swift */,
+				DF158EC92C867A4500D52C59 /* Assignments */,
 			);
 			path = Course;
+			sourceTree = "<group>";
+		};
+		DF158EC92C867A4500D52C59 /* Assignments */ = {
+			isa = PBXGroup;
+			children = (
+				DF158EC72C867A4500D52C59 /* AssignmentsHomeView.swift */,
+				DF158EC82C867A4500D52C59 /* AssignmentView.swift */,
+			);
+			path = Assignments;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -242,6 +256,7 @@
 				DF158EA42C864C5F00D52C59 /* SignInView.swift in Sources */,
 				DF158EA22C864C5200D52C59 /* RootView.swift in Sources */,
 				DF158EB12C864E9E00D52C59 /* Operators.swift in Sources */,
+				DF158ECB2C867A4500D52C59 /* AssignmentView.swift in Sources */,
 				DF158EB72C86576F00D52C59 /* SettingsView.swift in Sources */,
 				DF158EC12C865A9E00D52C59 /* CourseHomeView.swift in Sources */,
 				DF158EAB2C864CEF00D52C59 /* Utilities.swift in Sources */,
@@ -250,6 +265,7 @@
 				DF158EAF2C864D5200D52C59 /* GoogleSignInHelper.swift in Sources */,
 				DF158EBC2C865A7900D52C59 /* DashboardView.swift in Sources */,
 				DF158EB92C8659FA00D52C59 /* FirestoreManager.swift in Sources */,
+				DF158ECA2C867A4500D52C59 /* AssignmentsHomeView.swift in Sources */,
 				DF158EAD2C864D3B00D52C59 /* AuthManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

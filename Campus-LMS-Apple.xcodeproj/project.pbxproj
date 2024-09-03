@@ -28,6 +28,8 @@
 		DF158ECA2C867A4500D52C59 /* AssignmentsHomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EC72C867A4500D52C59 /* AssignmentsHomeView.swift */; };
 		DF158ECB2C867A4500D52C59 /* AssignmentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF158EC82C867A4500D52C59 /* AssignmentView.swift */; };
 		DF3445C32C86867900EAA8BB /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3445C22C86867900EAA8BB /* CourseView.swift */; };
+		DF3445C52C86883500EAA8BB /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3445C42C86883500EAA8BB /* AttributedText.swift */; };
+		DF3445C72C86886800EAA8BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3445C62C86886800EAA8BB /* Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +52,8 @@
 		DF158EC72C867A4500D52C59 /* AssignmentsHomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentsHomeView.swift; sourceTree = "<group>"; };
 		DF158EC82C867A4500D52C59 /* AssignmentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AssignmentView.swift; sourceTree = "<group>"; };
 		DF3445C22C86867900EAA8BB /* CourseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
+		DF3445C42C86883500EAA8BB /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
+		DF3445C62C86886800EAA8BB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				DF158EAA2C864CEF00D52C59 /* Utilities.swift */,
+				DF3445C42C86883500EAA8BB /* AttributedText.swift */,
+				DF3445C62C86886800EAA8BB /* Extensions.swift */,
 				DF158EB02C864E9E00D52C59 /* Operators.swift */,
 			);
 			path = Utilities;
@@ -256,6 +262,7 @@
 				DF158EA42C864C5F00D52C59 /* SignInView.swift in Sources */,
 				DF158EA22C864C5200D52C59 /* RootView.swift in Sources */,
 				DF3445C32C86867900EAA8BB /* CourseView.swift in Sources */,
+				DF3445C52C86883500EAA8BB /* AttributedText.swift in Sources */,
 				DF158EB12C864E9E00D52C59 /* Operators.swift in Sources */,
 				DF158ECB2C867A4500D52C59 /* AssignmentView.swift in Sources */,
 				DF158EB72C86576F00D52C59 /* SettingsView.swift in Sources */,
@@ -263,6 +270,7 @@
 				DF158E872C86478300D52C59 /* Campus_LMS_iOSApp.swift in Sources */,
 				DF158EBF2C865A9200D52C59 /* CourseCoverView.swift in Sources */,
 				DF158EAF2C864D5200D52C59 /* GoogleSignInHelper.swift in Sources */,
+				DF3445C72C86886800EAA8BB /* Extensions.swift in Sources */,
 				DF158EBC2C865A7900D52C59 /* DashboardView.swift in Sources */,
 				DF158EB92C8659FA00D52C59 /* FirestoreManager.swift in Sources */,
 				DF158ECA2C867A4500D52C59 /* AssignmentsHomeView.swift in Sources */,

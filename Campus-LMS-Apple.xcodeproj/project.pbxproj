@@ -61,6 +61,7 @@
 		DF3445CE2C869DF200EAA8BB /* HtmlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlView.swift; sourceTree = "<group>"; };
 		DF3445D02C869EB400EAA8BB /* layout.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = layout.html; sourceTree = "<group>"; };
 		DF3445D82C86A9C200EAA8BB /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
+		DF3445E02C88184400EAA8BB /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +83,7 @@
 		DF158E782C86476900D52C59 = {
 			isa = PBXGroup;
 			children = (
+				DF3445E02C88184400EAA8BB /* README.md */,
 				DF158E852C86478300D52C59 /* Campus-LMS-iOS */,
 				DF158E842C86478300D52C59 /* Products */,
 			);

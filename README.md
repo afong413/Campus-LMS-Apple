@@ -14,7 +14,7 @@ The app itself is meant to _eventually_ replace Canvas LMS (see where I got the 
 
 ## Features (so far)
 
-This list is kind of short. Don't bully me. I had a week. Remember this is mostly just features I "_would_ add". The ones I already did were just because I wanted something to code lol.
+This list is kind of short. Don't bully me. I had a week. Remember this project is mostly just something I "_would_ add". The ones I already did were just because I wanted something to code lol.
 
 - Create assignments (in website but that's broken at the moment)
   - Using the TipTap rich text editor.

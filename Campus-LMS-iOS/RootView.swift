@@ -12,6 +12,7 @@ final class RootViewModel: ObservableObject {
     @Published var user: AuthResultModel? = nil
     @Published var courses: [CourseModel] = []
     @Published var authenticated = true
+    @Published var assignments: [AssignmentModel] = []
     
     func getAuthenticatedUser() throws {
         do {
@@ -52,6 +53,14 @@ final class RootViewModel: ObservableObject {
         for ref in userModel.courses {
             courses.append(try await FirestoreManager.shared.getCourse(ref))
         }
+    }
+    
+    func getAssignments(course: CourseModel) async throws {
+        guard let courseId = course.courseId else {
+            throw FirestoreError.noId
+        }
+        
+        assignments = try await FirestoreManager.shared.getAssignments(courseId: courseId)
     }
 }
 

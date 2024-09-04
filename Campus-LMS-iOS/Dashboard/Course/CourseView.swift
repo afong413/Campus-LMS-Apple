@@ -27,30 +27,30 @@ final class CourseViewModel: ObservableObject {
 }
 
 struct CourseView: View {
-    @StateObject var viewModel: CourseViewModel
-    
-    init(course: CourseModel) {
-        _viewModel = StateObject(wrappedValue: CourseViewModel(course: course))
-    }
+    let course: CourseModel
+    @StateObject var viewModel: RootViewModel
     
     var body: some View {
         List {
             NavigationLink("Assignments") {
-                AssignmentsHomeView(viewModel: viewModel)
+                AssignmentsHomeView(course: course, viewModel: viewModel)
             }
         }
-        .navigationTitle(viewModel.course.title)
+        .navigationTitle(course.title)
     }
 }
 
 #Preview {
     NavigationStack {
-        CourseView(course: CourseModel(
-            courseId: "0000",
-            title: "Math 6",
-            room: "Hill 22",
-            teachers: [],
-            students: []
-        ))
+        CourseView(
+            course: CourseModel(
+                courseId: "0000",
+                title: "Math 6",
+                room: "Hill 22",
+                teachers: [],
+                students: []
+            ),
+            viewModel: RootViewModel()
+        )
     }
 }

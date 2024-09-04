@@ -7,7 +7,6 @@
 
 import SwiftUI
 
-
 /// From: https://medium.com/@thomsmed/rendering-html-in-swiftui-65e883a63571
 struct AttributedText: UIViewRepresentable {
     private let attributedString: NSAttributedString

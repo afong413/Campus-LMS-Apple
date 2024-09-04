@@ -81,3 +81,47 @@ private extension UIColor {
     }
 }
 
+// MARK: MIME types
+/// From: https://stackoverflow.com/questions/31243371/path-extension-and-mime-type-of-file-in-swift
+
+import UniformTypeIdentifiers
+
+extension NSURL {
+    public func mimeType() -> String {
+        if let pathExt = self.pathExtension,
+            let mimeType = UTType(filenameExtension: pathExt)?.preferredMIMEType {
+            return mimeType
+        }
+        else {
+            return "application/octet-stream"
+        }
+    }
+}
+
+extension URL {
+    public func mimeType() -> String {
+        if let mimeType = UTType(filenameExtension: self.pathExtension)?.preferredMIMEType {
+            return mimeType
+        }
+        else {
+            return "application/octet-stream"
+        }
+    }
+}
+
+extension NSString {
+    public func mimeType() -> String {
+        if let mimeType = UTType(filenameExtension: self.pathExtension)?.preferredMIMEType {
+            return mimeType
+        }
+        else {
+            return "application/octet-stream"
+        }
+    }
+}
+
+extension String {
+    public func mimeType() -> String {
+        return (self as NSString).mimeType()
+    }
+}

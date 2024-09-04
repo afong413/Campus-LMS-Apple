@@ -30,6 +30,10 @@
 		DF3445C32C86867900EAA8BB /* CourseView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3445C22C86867900EAA8BB /* CourseView.swift */; };
 		DF3445C52C86883500EAA8BB /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3445C42C86883500EAA8BB /* AttributedText.swift */; };
 		DF3445C72C86886800EAA8BB /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3445C62C86886800EAA8BB /* Extensions.swift */; };
+		DF3445CF2C869DF200EAA8BB /* HtmlView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3445CE2C869DF200EAA8BB /* HtmlView.swift */; };
+		DF3445D32C869F5A00EAA8BB /* layout.html in Resources */ = {isa = PBXBuildFile; fileRef = DF3445D02C869EB400EAA8BB /* layout.html */; };
+		DF3445D62C86A9A000EAA8BB /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = DF3445D52C86A9A000EAA8BB /* FirebaseStorage */; };
+		DF3445D92C86A9C200EAA8BB /* StorageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF3445D82C86A9C200EAA8BB /* StorageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +58,9 @@
 		DF3445C22C86867900EAA8BB /* CourseView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CourseView.swift; sourceTree = "<group>"; };
 		DF3445C42C86883500EAA8BB /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
 		DF3445C62C86886800EAA8BB /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		DF3445CE2C869DF200EAA8BB /* HtmlView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HtmlView.swift; sourceTree = "<group>"; };
+		DF3445D02C869EB400EAA8BB /* layout.html */ = {isa = PBXFileReference; lastKnownFileType = text.html; path = layout.html; sourceTree = "<group>"; };
+		DF3445D82C86A9C200EAA8BB /* StorageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StorageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,6 +71,7 @@
 				DF158E942C8649B000D52C59 /* FirebaseAuth in Frameworks */,
 				DF158E962C8649B000D52C59 /* FirebaseFirestore in Frameworks */,
 				DF158E992C8649B900D52C59 /* GoogleSignIn in Frameworks */,
+				DF3445D62C86A9A000EAA8BB /* FirebaseStorage in Frameworks */,
 				DF158E9B2C8649B900D52C59 /* GoogleSignInSwift in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +124,7 @@
 		DF158EA52C864CAC00D52C59 /* Firebase */ = {
 			isa = PBXGroup;
 			children = (
+				DF3445D72C86A9B400EAA8BB /* Storage */,
 				DF158EA82C864CC600D52C59 /* Auth */,
 				DF158EA92C864CCD00D52C59 /* Firestore */,
 			);
@@ -125,6 +134,7 @@
 		DF158EA72C864CBB00D52C59 /* Utilities */ = {
 			isa = PBXGroup;
 			children = (
+				DF3445D42C86A07200EAA8BB /* HTML */,
 				DF158EAA2C864CEF00D52C59 /* Utilities.swift */,
 				DF3445C42C86883500EAA8BB /* AttributedText.swift */,
 				DF3445C62C86886800EAA8BB /* Extensions.swift */,
@@ -178,6 +188,23 @@
 			path = Assignments;
 			sourceTree = "<group>";
 		};
+		DF3445D42C86A07200EAA8BB /* HTML */ = {
+			isa = PBXGroup;
+			children = (
+				DF3445CE2C869DF200EAA8BB /* HtmlView.swift */,
+				DF3445D02C869EB400EAA8BB /* layout.html */,
+			);
+			path = HTML;
+			sourceTree = "<group>";
+		};
+		DF3445D72C86A9B400EAA8BB /* Storage */ = {
+			isa = PBXGroup;
+			children = (
+				DF3445D82C86A9C200EAA8BB /* StorageManager.swift */,
+			);
+			path = Storage;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -199,6 +226,7 @@
 				DF158E952C8649B000D52C59 /* FirebaseFirestore */,
 				DF158E982C8649B900D52C59 /* GoogleSignIn */,
 				DF158E9A2C8649B900D52C59 /* GoogleSignInSwift */,
+				DF3445D52C86A9A000EAA8BB /* FirebaseStorage */,
 			);
 			productName = "Campus-LMS-iOS";
 			productReference = DF158E832C86478300D52C59 /* Campus LMS.app */;
@@ -246,6 +274,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DF3445D32C869F5A00EAA8BB /* layout.html in Resources */,
 				DF158E8E2C86478400D52C59 /* Preview Assets.xcassets in Resources */,
 				DF158E8B2C86478400D52C59 /* Assets.xcassets in Resources */,
 				DF158EA02C864B6500D52C59 /* GoogleService-Info.plist in Resources */,
@@ -267,6 +296,7 @@
 				DF158ECB2C867A4500D52C59 /* AssignmentView.swift in Sources */,
 				DF158EB72C86576F00D52C59 /* SettingsView.swift in Sources */,
 				DF158EAB2C864CEF00D52C59 /* Utilities.swift in Sources */,
+				DF3445D92C86A9C200EAA8BB /* StorageManager.swift in Sources */,
 				DF158E872C86478300D52C59 /* Campus_LMS_iOSApp.swift in Sources */,
 				DF158EBF2C865A9200D52C59 /* CourseCoverView.swift in Sources */,
 				DF158EAF2C864D5200D52C59 /* GoogleSignInHelper.swift in Sources */,
@@ -275,6 +305,7 @@
 				DF158EB92C8659FA00D52C59 /* FirestoreManager.swift in Sources */,
 				DF158ECA2C867A4500D52C59 /* AssignmentsHomeView.swift in Sources */,
 				DF158EAD2C864D3B00D52C59 /* AuthManager.swift in Sources */,
+				DF3445CF2C869DF200EAA8BB /* HtmlView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -284,12 +315,14 @@
 		DF158E7D2C86476900D52C59 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 			};
 			name = Debug;
 		};
 		DF158E7E2C86476900D52C59 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				"OTHER_LDFLAGS[arch=*]" = "-ObjC";
 			};
 			name = Release;
 		};
@@ -532,6 +565,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = DF158E972C8649B900D52C59 /* XCRemoteSwiftPackageReference "GoogleSignIn-iOS" */;
 			productName = GoogleSignInSwift;
+		};
+		DF3445D52C86A9A000EAA8BB /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = DF158E922C8649B000D52C59 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

@@ -8,19 +8,20 @@
 import SwiftUI
 
 struct AssignmentsHomeView: View {
-    @StateObject var viewModel: CourseViewModel
+    let course: CourseModel
+    @StateObject var viewModel: RootViewModel
     
     var body: some View {
         List {
             ForEach(viewModel.assignments) { assignment in
                 NavigationLink(assignment.title) {
-                    AssignmentView(assignment: assignment)
+                    AssignmentView(assignment: assignment, course: course, viewModel: viewModel)
                 }
             }
         }
         .onAppear {
             Task {
-                try await viewModel.getAssignments()
+                try await viewModel.getAssignments(course: course)
             }
         }
         .navigationTitle("Assignments")
@@ -29,12 +30,15 @@ struct AssignmentsHomeView: View {
 
 #Preview {
     NavigationStack {
-        AssignmentsHomeView(viewModel: CourseViewModel(course: CourseModel(
-            courseId: "0000",
-            title: "Math 6",
-            room: "Hill 22",
-            teachers: [],
-            students: []
-        )))
+        AssignmentsHomeView(
+            course: CourseModel(
+                courseId: "0000",
+                title: "Math 6",
+                room: "Hill 22",
+                teachers: [],
+                students: []
+            ),
+            viewModel: RootViewModel()
+        )
     }
 }

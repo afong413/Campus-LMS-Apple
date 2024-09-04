@@ -36,9 +36,16 @@ struct AssignmentModel: Codable, Identifiable {
     let numSubmissions: Int?
 }
 
+struct SubmissionsModel: Codable {
+    @DocumentID var userEmail: String?
+    let submissions: [String:Date]
+}
+
 final class FirestoreManager {
     static let shared = FirestoreManager()
     private init() {}
+    
+    let firestore = Firestore.firestore()
     
     private let encoder: Firestore.Encoder = {
         let encoder = Firestore.Encoder()
@@ -53,25 +60,21 @@ final class FirestoreManager {
     }()
     
     func getUser(_ ref: DocumentReference) async throws -> UserModel {
-        return try await ref.getDocument(as: UserModel.self, decoder: decoder)
+        try await ref.getDocument(as: UserModel.self, decoder: decoder)
     }
     
     func getUser(email: String) async throws -> UserModel {
-        let ref = Firestore.firestore()
-            .collection("users")
-            .document(email)
+        let ref = firestore.collection("users").document(email)
         
         return try await getUser(ref)
     }
     
     func getCourse(_ ref: DocumentReference) async throws -> CourseModel {
-        return try await ref.getDocument(as: CourseModel.self, decoder: decoder)
+        try await ref.getDocument(as: CourseModel.self, decoder: decoder)
     }
     
     func getCourse(id: String) async throws -> CourseModel {
-        let ref = Firestore.firestore()
-            .collection("courses")
-            .document(id)
+        let ref = firestore.collection("courses").document(id)
         
         return try await getCourse(ref)
     }
@@ -92,11 +95,34 @@ final class FirestoreManager {
     }
     
     func getAssignments(courseId: String) async throws -> [AssignmentModel] {
-        let courseRef = Firestore.firestore()
-            .collection("courses")
-            .document(courseId)
+        let courseRef = firestore.collection("courses").document(courseId)
         
         return try await getAssignments(courseRef)
+    }
+    
+    func submit(course: CourseModel, assignment: AssignmentModel, email: String, file: String) async throws {
+        guard let courseId = course.courseId, let assignmentId = assignment.assignmentId else {
+            throw FirestoreError.noId
+        }
+        
+        let ref = firestore.collection("courses").document(courseId)
+            .collection("assignments").document(assignmentId)
+            .collection("submissions").document(email)
+        
+        let doc = try await ref.getDocument()
+        
+        if doc.exists {
+            var submissions = try doc.data(as: SubmissionsModel.self, decoder: decoder).submissions
+            submissions[file] = Date()
+            
+            try await ref.updateData([
+                "submissions": submissions
+            ])
+        } else {
+            try await ref.setData([
+                "submissions": [file:Date()]
+            ])
+        }
     }
 }
 
